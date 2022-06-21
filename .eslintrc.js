@@ -2,48 +2,51 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true,
+    node: true
   },
   extends: [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
-  plugins: ["react", "import", "jsx-a11y", "@typescript-eslint"],
-  parser: "@typescript-eslint/parser",
+  plugins: ['react', 'import', 'jsx-a11y', '@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: "./tsconfig.json",
-    sourceType: "module",
+    project: './tsconfig.json',
+    sourceType: 'module',
     ecmaVersions: 2021,
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   rules: {
-    "react/react-in-jsx-scope": "off",
-    "react/self-closing-comp": [
-      "error",
+    'react/react-in-jsx-scope': 'off',
+    'react/self-closing-comp': [
+      'error',
       {
         component: true,
-        html: true,
-      },
+        html: true
+      }
     ],
+    'jsx-quotes': ['error', 'prefer-single'],
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    'import/default': 'off'
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect'
     },
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
     },
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
-        alwaysTryTypes: true,
-      },
-    },
-  },
-};
+        alwaysTryTypes: true
+      }
+    }
+  }
+}
