@@ -33,6 +33,14 @@ module.exports = {
       }
     ],
     'jsx-quotes': ['error', 'prefer-single'],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_'
+      }
+    ],
+    'no-unused-vars': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'import/default': 'off'
   },
